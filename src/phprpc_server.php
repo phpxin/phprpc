@@ -410,7 +410,7 @@ class PHPRPC_Server {
         $_SESSION[$this->cid] = base64_encode(serialize($session));
         $this->sendCallback();
     }
-    function initSession() {
+    public static function initSession() {
         @ob_start();
         ob_implicit_flush(0);
         session_start();
